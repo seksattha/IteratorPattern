@@ -1,4 +1,5 @@
-public class MenuItem {
+public class MenuItem extends MenuComponent {
+//    Leaf Class
     private String name;
     private double price;
 
@@ -11,9 +12,18 @@ public class MenuItem {
         return name;
     }
 
+
     public double getPrice() {
         return price;
     }
+
+    @Override
+    public void print() {
+        System.out.println("    " + getName());
+        System.out.println(", " + getName());
+        System.out.println(".- "+ getPrice());
+    }
+
 
 
 }

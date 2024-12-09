@@ -27,5 +27,5 @@ public abstract class MenuComponent {
         throw new UnsupportedOperationException();
     }
 
-x
+
 }
