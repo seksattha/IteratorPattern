@@ -1,22 +1,13 @@
 public class Waitress {
-    WesternHouseMenu westernHouseMenu;
+    MenuComponent allMenus;
 
-    public Waitress(WesternHouseMenu westernHouseMenu) {
-        this.westernHouseMenu = westernHouseMenu;
+    public Waitress(MenuComponent allMenus) {
+        this.allMenus =allMenus;
     }
 
     public void printMenu() {
-        Iterator westernIterator = westernHouseMenu.createIterator();
-        System.out.println("อาหารฝรั่ง");
-        printMenu(westernIterator);
-
+        allMenus.print();
     }
 
-    private void printMenu(Iterator iterator) {
-        while (iterator.hasNext()) {
-            MenuItem menuItem = iterator.next();
-            System.out.println(menuItem.getName() + " ,");
-            System.out.println(menuItem.getPrice() + " .-");
-        }
-    }
+
 }
