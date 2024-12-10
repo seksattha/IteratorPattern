@@ -3,9 +3,21 @@
 public class Main {
     public static void main(String[] args) {
 
-        WesternHouseMenu breakfastMenu = new WesternHouseMenu();
-        Waitress waitress = new Waitress(breakfastMenu);
+        MenuComponent SizzlerMenu = new Menu("อาหารฝรั่ง");
+        MenuComponent ZenMenu = new Menu("อาหารญี่ปุ่น");
+
+        MenuComponent allMenus = new Menu("ALL MENUS");
+
+        allMenus.add(SizzlerMenu);
+        allMenus.add(ZenMenu);
+
+        SizzlerMenu.add(new MenuItem("Steak", 399));
+        SizzlerMenu.add(new MenuItem("Pork Shop", 299));
+
+        Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
+
+
 
     }
 }
