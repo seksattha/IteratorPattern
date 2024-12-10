@@ -19,7 +19,7 @@ public class MenuItem extends MenuComponent {
 
     @Override
     public void print() {
-        System.out.println("    " + getName());
+
         System.out.println(", " + getName());
         System.out.println(".- "+ getPrice());
     }

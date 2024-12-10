@@ -14,6 +14,10 @@ public class Main {
         SizzlerMenu.add(new MenuItem("Steak", 399));
         SizzlerMenu.add(new MenuItem("Pork Shop", 299));
 
+
+        ZenMenu.add(new MenuItem("Shushi set", 345));
+        ZenMenu.add(new MenuItem("Curry Rice", 105));
+
         Waitress waitress = new Waitress(allMenus);
         waitress.printMenu();
 
